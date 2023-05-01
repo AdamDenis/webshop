@@ -1,0 +1,23 @@
+<div *ngIf="clothePageTags else:tag" [style.justify-content]="justifyContent"  class="container">
+  <a *ngFor="let tagName of clothePageTags" routerLink="/tags/{{tagName}}">
+    {{tagName}}
+  </a>
+</div>
+<ng-template #tag>
+  <div *ngIf="status; else: inactive" class="active menu">
+    <img src="/assets/icons/arrow.png" (click)="status = !status">
+    <div *ngIf="tags" [style.justify-content]="justifyContent" class="container">
+      <a *ngFor="let tag of tags" routerLink="/tags/{{tag.name}}">
+        {{tag.name}}({{tag.count}})
+      </a>
+    </div>
+  </div>
+
+  <ng-template #inactive>
+    <div class="menu">
+      <img src="/assets/icons/menu.png" alt="menu" (click)="status = !status">
+    </div>
+
+  </ng-template>
+</ng-template>
+

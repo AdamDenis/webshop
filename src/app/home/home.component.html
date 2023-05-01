@@ -1,0 +1,32 @@
+<app-tags></app-tags>
+<app-search></app-search>
+<ul>
+  <li *ngFor="let cloth of clothes">
+    <a routerLink="/cloth/{{cloth.id}}">
+      <img src="{{cloth.imageUrl}}" alt="img">
+    <div class="content">
+      <div class="name">
+        {{cloth.name}}
+      </div>
+      <span class="favourite {{cloth.favourite?'':'not'}}" >
+        ❤
+      </span>
+        <div class="stars">
+          <star-rating
+            [value]="cloth.stars"
+            [totalstars]="5"
+            checkedcolor="red"
+            uncheckedcolor="black"
+            size="18px"
+            [readonly]="true">
+          </star-rating>
+        </div>
+        <div class="price">
+          <span>
+            {{cloth.price|currency}}
+          </span>
+        </div>
+    </div>
+    </a>
+  </li>
+</ul>
