@@ -1,30 +1,30 @@
 <div class="container">
-  <img [src]="clothes.imageUrl" [alt]="clothes.name">
+  <img [src]="cloth.imageUrl" [alt]="cloth.name">
   <div class="details">
     <div class="header">
       <span class="name">
-        {{clothes.name}}
+        {{cloth.name}}
       </span>
-      <span class="favourite {{clothes.favourite?'':'not'}}">
+      <span class="favourite {{cloth.favourite?'':'not'}}">
         ❤
       </span>
     </div>
     <div class="rating">
-     <!-- <star-rating
-        [value]='clothes.stars'
+      <star-rating
+        [value]='cloth.stars'
         [totalstars]="5"
         checkedcolor="red"
         uncheckedcolor="black"
         size="30px"
         [readonly]="true">
-      </star-rating>-->
+      </star-rating>
     </div>
     <div class="tags">
-      <app-tags [clothePageTags]="clothes.tags" justifyContent="start"></app-tags>
+      <app-tags [clothePageTags]="cloth.tags" justifyContent="start"></app-tags>
     </div>
     <div class="price">
-      <span>{{clothes.price|currency}}</span>
+      <span>{{cloth.price|currency}}</span>
     </div>
-    <button>Add To Cart</button>
+    <button (click)="addToCart()" routerLink="/cart-page">Add To Cart</button>
   </div>
 </div>

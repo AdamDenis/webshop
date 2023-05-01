@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {Clothes} from "../shared/models/Clothes";
 import {ClothesService} from "../services/clothes/clothes.service";
+import { CartService } from '../services/cart/cart.service';
 
 @Component({
   selector: 'app-cloth-page',
@@ -10,15 +11,22 @@ import {ClothesService} from "../services/clothes/clothes.service";
 })
 export class ClothPageComponent implements OnInit {
 
-  clothes! : Clothes;
-  constructor(private activatedRoute: ActivatedRoute, private clothesService: ClothesService) {
+  cloth! : Clothes;
+  constructor(private activatedRoute: ActivatedRoute,
+              private clothesService: ClothesService,
+              private cartService: CartService) {
     activatedRoute.params.subscribe((params)=> {
       if(params['id']){
-        this.clothes = clothesService.getClothById(params['id']);
+        this.cloth = clothesService.getClothById(params['id']);
       }
     })
   }
   ngOnInit(): void {
+  }
+
+  addToCart(){
+    this.cartService.addToCart(this.cloth);
+   /* this.router.navigateByUrl('/cart-page');*/
   }
 
 }

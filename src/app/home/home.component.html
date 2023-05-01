@@ -3,23 +3,23 @@
 <ul>
   <li *ngFor="let cloth of clothes">
     <a routerLink="/cloth/{{cloth.id}}">
-      <img src="{{cloth.imageUrl}}" alt="img">
+      <img [src]="cloth.imageUrl" alt="img">
     <div class="content">
       <div class="name">
         {{cloth.name}}
       </div>
-      <span class="favourite {{cloth.favourite?'':'not'}}" >
+      <span class="favourite" [ngClass]="{not: cloth.favourite}" [class.not]="cloth.favourite">
         ❤
       </span>
         <div class="stars">
-          <!--<star-rating
+          <star-rating
             [value]="cloth.stars"
             [totalstars]="5"
             checkedcolor="red"
             uncheckedcolor="black"
             size="18px"
             [readonly]="true">
-          </star-rating>-->
+          </star-rating>
         </div>
         <div class="price">
           <span>
