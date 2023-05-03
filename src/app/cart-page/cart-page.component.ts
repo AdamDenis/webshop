@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart/cart.service';
 import {Cart} from "../shared/models/Cart";
 import {CartItem} from "../shared/models/CartItem";
+import {ClothesService} from "../services/clothes/clothes.service";
 
 @Component({
   selector: 'app-cart-page',
