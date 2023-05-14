@@ -48,6 +48,7 @@ export class ClothesService {
         favourite: true,
         stars: 3.5,
         imageUrl: '/assets/images/tshirt.png',
+        
       },
       {
         id: 2,
@@ -75,6 +76,7 @@ export class ClothesService {
         favourite: false,
         stars: 4.5,
         imageUrl: '/assets/images/pants2.png',
+        
       },
       {
         id: 5,
@@ -84,6 +86,7 @@ export class ClothesService {
         favourite: true,
         stars: 4.5,
         imageUrl: '/assets/images/hoodi.png',
+        
       },
       {
         id: 6,
@@ -93,6 +96,7 @@ export class ClothesService {
         favourite: false,
         stars: 4.5,
         imageUrl: '/assets/images/hoodi2.png',
+        
       },
       {
         id: 7,
@@ -102,6 +106,7 @@ export class ClothesService {
         favourite: true,
         stars: 4.5,
         imageUrl: '/assets/images/form.png',
+        
       },
       {
         id: 8,
@@ -111,6 +116,7 @@ export class ClothesService {
         favourite: false,
         stars: 4.5,
         imageUrl: '/assets/images/form2.png',
+        
       }
     ]
   }

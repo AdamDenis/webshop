@@ -28,7 +28,9 @@ export class ClothPageComponent implements OnInit {
 
     addToCart() {
         this.cartService.addToCart(this.cloth);
-        /* this.router.navigateByUrl('/cart-page');*/
+    }
+    checkCart() {
+        return this.cartService.checkCart(this.cloth.id);
     }
 
 }

@@ -31,4 +31,13 @@ export class CartService {
   getCart():Cart{
     return this.cart;
   }
+
+  checkCart(clothId: number){
+    if (this.cart.items.filter(e => e.cloth.id === clothId).length > 0) {
+      return true;
+    }else {
+      return false;
+    }
+  }
+
 }

@@ -44,7 +44,7 @@ ul li div:not(:first-child){
     flex-basis: 18%;
 }
 
-ul li select{
+ul li input{
     width: 3rem;
     outline: none;
     border: none;

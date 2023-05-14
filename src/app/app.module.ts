@@ -13,7 +13,10 @@ import {CartPageComponent} from './cart-page/cart-page.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {FooterComponent} from './footer/footer.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
-//import {MatBadgeModule} from '@angular/material/badge';
+
+
+
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -25,14 +28,13 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
         CartPageComponent,
         NotFoundComponent,
         FooterComponent,
-        ScrollToTopComponent
+        ScrollToTopComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         RatingModule,
         FormsModule,
-        //MatBadgeModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

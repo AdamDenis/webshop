@@ -58,7 +58,7 @@ img{
   color: darkgray;
 }
 
-.details button{
+.add-btn{
   color: white;
   background: #e72929;
   border: none;
@@ -68,7 +68,16 @@ img{
   outline: none;
 }
 
-.details button:hover{
+.add-btn:hover{
   opacity: .9;
   cursor: pointer;
+}
+.added{
+  color: white;
+  background: #177fbd;
+  border: none;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius:10rem;
+  outline: none;
 }

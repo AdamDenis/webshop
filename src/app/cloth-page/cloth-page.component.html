@@ -29,6 +29,9 @@
         <div class="price">
             <span>{{cloth.price|currency}}</span>
         </div>
-        <button (click)="addToCart()">Add To Cart</button>
+        <button *ngIf="!checkCart() else: added" (click)="addToCart()" class="add-btn">Add To Cart</button>
+        <ng-template #added>
+            <button class="added">Added To Cart</button>
+        </ng-template>
     </div>
 </div>
