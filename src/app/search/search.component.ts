@@ -12,11 +12,12 @@ export class SearchComponent implements OnInit {
     }
   ngOnInit(): void {
       this.route.params.subscribe(params => {
-        if(params['searchTerm'])
-        this.searchTerm = params['searchTerm'];
+        if(params['searchTerm']){
+            this.searchTerm = params['searchTerm'];
+        }
       })
   }
-  search(): void {
+  search() {
       if(this.searchTerm){
         this.router.navigateByUrl('/search/' + this.searchTerm);
       }

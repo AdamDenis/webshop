@@ -9,7 +9,7 @@
       <span class="name">
         {{cloth.name}}
       </span>
-            <span class="favourite {{cloth.favourite?'':'not'}}">
+            <span class="favourite" [ngClass]="{not: cloth.favourite}" >
         ❤
       </span>
         </div>

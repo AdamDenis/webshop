@@ -1,0 +1,28 @@
+
+.block{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    display: flex;
+    margin: 1rem;
+    margin-left: 5rem;
+    flex-wrap: wrap;
+    gap: 15%;
+}
+span{
+    font-size: 1rem;
+    font-weight: bolder;
+    color: grey;
+}
+span:hover{
+    text-shadow: 1px 1px 2px #e72929;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: grey;
+}
+a:hover{
+    text-shadow: 1px 1px 2px #e72929;
+}
