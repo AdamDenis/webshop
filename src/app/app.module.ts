@@ -12,6 +12,7 @@ import {ClothPageComponent} from './cloth-page/cloth-page.component';
 import {CartPageComponent} from './cart-page/cart-page.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {FooterComponent} from './footer/footer.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 //import {MatBadgeModule} from '@angular/material/badge';
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import {FooterComponent} from './footer/footer.component';
         ClothPageComponent,
         CartPageComponent,
         NotFoundComponent,
-        FooterComponent
+        FooterComponent,
+        ScrollToTopComponent
     ],
     imports: [
         BrowserModule,

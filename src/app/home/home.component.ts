@@ -4,6 +4,7 @@ import {Clothes} from "../shared/models/Clothes";
 import {ActivatedRoute} from "@angular/router";
 
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -28,4 +29,5 @@ export class HomeComponent implements OnInit{
         this.clothes = this.clothesService.getAll();
     })
   }
+
 }
